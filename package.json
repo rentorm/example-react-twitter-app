@@ -11,11 +11,13 @@
   "author": "Rento",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "next": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "semantic-ui-react": "^0.72.0"
+    "semantic-ui-react": "^0.72.0",
+    "twitter": "^1.7.1"
   },
   "devDependencies": {
     "stylelint": "7.10.1",
