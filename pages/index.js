@@ -1,13 +1,13 @@
 import Layout from '../components/Layout.js'
-import MasterHeader from '../components/Header';
-import TweetList from '../components/TweetList';
+import MasterHeader from '../components/MasterHeader';
+import TweetsList from '../components/TweetsList';
 
 export default () => (
   <Layout>
 
     <MasterHeader />
 
-    <TweetList />
+    <TweetsList />
 
   </Layout>
 )

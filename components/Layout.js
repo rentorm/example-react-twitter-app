@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Layout = (props) => (
+export default (props) => (
   <div>
 
     <Head>
@@ -12,5 +12,3 @@ const Layout = (props) => (
     {props.children}
   </div>
 )
-
-export default Layout
