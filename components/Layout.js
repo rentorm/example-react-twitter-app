@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 export default (props) => (
-  <div>
+  <div style={{ background: '#f6f6f8' }}>
 
     <Head>
       <title>Latest tweets</title>
