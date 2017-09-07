@@ -1,0 +1,25 @@
+{
+  "name": "example-react-twitter-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "Rento",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "next": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "semantic-ui-react": "^0.72.0"
+  },
+  "devDependencies": {
+    "stylelint": "7.10.1",
+    "stylelint-config-standard": "16.0.0",
+    "stylelint-selector-bem-pattern": "^1.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+.idea
+
+dist
+.next
+.env
+node_modules
+package-lock.json
+*.log
+.DS_Store
