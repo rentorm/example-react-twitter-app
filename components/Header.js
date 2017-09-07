@@ -1,7 +1,11 @@
-const Header = () => (
+import { Grid, Header } from 'semantic-ui-react';
+
+const MasterHeader = () => (
     <div>
-        header placeholder
+        <Header textAlign="center" attached as="h1">
+          Latest tweets
+        </Header>
     </div>
 )
 
-export default Header
+export default MasterHeader
