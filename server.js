@@ -23,21 +23,23 @@ app.prepare()
   const server = express()
 
     // twitter api
-    server.get('/api/tweets', (req, res) => {
+    server.get('/api/tweets/:handle?', (req, res) => {
+      const { handle = twitterHandle } = req.params;
       return twitterClient
         .get(`statuses/user_timeline`, {
-          screen_name: twitterHandle,
+          screen_name: handle,
           count: 10
         })
-        .then(tweets => res.json({ twitterHandle, tweets }))
+        .then(tweets => res.json({ handle, tweets }))
         .catch(err => {
           console.error('Error', err);
           return res.status(500).json({ error: 'Invalid request' });
         });
     });
 
-  server.get('/', (req, res) => {
-    return app.render(req, res, '/', req.query)
+  server.get('/:handle', (req, res) => {
+    const queryParams = { handle: req.params.handle }
+    return app.render(req, res, '/', queryParams)
   })
 
   server.get('*', (req, res) => {

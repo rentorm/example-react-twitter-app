@@ -7,11 +7,18 @@ import TweetsList from '../components/TweetsList';
 
 export default class extends React.Component {
 
-  static async getInitialProps () {
+  static async getInitialProps (context) {
+    const handle = context.req.params.handle;
     // eslint-disable-next-line no-undef
-    const res = await fetch(TWITTER_DATA_API)
+    const url = handle
+      ? `${TWITTER_DATA_API}/api/tweets/${handle.replace('-tweets', '')}`
+      : `${TWITTER_DATA_API}/api/tweets`
+    const res = await fetch(url)
     const json = await res.json()
-    return { tweets: json.tweets }
+    return {
+      tweets: json.tweets,
+      handle: json.handle,
+    }
   }
 
   render() {
@@ -23,7 +30,7 @@ export default class extends React.Component {
     return (
       <Layout>
 
-        <MasterHeader />
+        <MasterHeader handle={this.props.handle} />
 
         {loadingMessage}
 

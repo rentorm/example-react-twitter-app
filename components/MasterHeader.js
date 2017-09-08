@@ -1,9 +1,9 @@
 import { Grid, Header } from 'semantic-ui-react';
 
-export default () => (
+export default ({ handle }) => (
     <div>
         <Header textAlign="center" attached as="h1">
-          Latest tweets
+          Latest tweets from @{handle}
         </Header>
     </div>
 )
