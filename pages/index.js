@@ -1,13 +1,13 @@
-import React from 'react'
-import fetch from 'isomorphic-fetch'
+import React from 'react';
+import fetch from 'isomorphic-fetch';
 
-import Layout from '../components/Layout.js'
+import Layout from '../components/Layout';
 import MasterHeader from '../components/MasterHeader';
 import TweetsList from '../components/TweetsList';
 
 export default class extends React.Component {
 
-  static async getInitialProps (context) {
+  static async getInitialProps(context) {
     const handle = context.req.params.handle;
     // eslint-disable-next-line no-undef
     const url = handle
@@ -24,7 +24,7 @@ export default class extends React.Component {
   render() {
     let loadingMessage
     if (this.props.tweets.length === 0) {
-      loadingMessage = <p><i>Loading tweets…</i></p>
+      loadingMessage = '<p><i>Loading tweets…</i></p>';
     }
 
     return (
